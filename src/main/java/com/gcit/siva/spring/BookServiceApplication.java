@@ -1,13 +1,10 @@
 package com.gcit.siva.spring;
 
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.logging.Logger;
 
 @SpringBootApplication
 public class BookServiceApplication {
