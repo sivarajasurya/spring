@@ -2,6 +2,7 @@ package com.gcit.siva.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,8 @@ public class BookServiceApplication {
 		SpringApplication.run(BookServiceApplication.class, args);
 	}
 
-	record Book(@Id Long id , String title){}
+	 record Book(@Id Long id  , String title){
+	 }
 
 	interface BookRepository extends CrudRepository<Book , Long>{}
 
@@ -22,6 +24,7 @@ public class BookServiceApplication {
 	class BookController{
 
 		private final BookRepository bookRepository;
+
 
 		BookController(BookRepository bookRepository) {
 			this.bookRepository = bookRepository;
