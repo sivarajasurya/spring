@@ -28,8 +28,9 @@ class ApplicationTests {
 				.exchange()
 				.expectStatus().is2xxSuccessful()
 				.expectBody(Book.class).value(actualBook ->{
-					MatcherAssert.assertThat(actualBook.id()).isNotNull();
-					MatcherAssert.assertThat(actualBook.title()).isEqualTo(bookToCreate.title());
+					MatcherAssert.assertThat(actualBook.id).isNotNull();
+					MatcherAssert.assertThat(actualBook.title).isEqualTo(bookToCreate.title());
+
 				});
 
 
