@@ -1,4 +1,4 @@
 CREATE TABLE book(
-      id BIG-SERIAL primary key,
+      id bigserial primary key,
       title varchar(255)
 );
